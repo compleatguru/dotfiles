@@ -89,6 +89,17 @@ Your `~/.vimrc.local` might look like this:
     highlight NonText guibg=#060606
     highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
+If you don't wish to install a vim plugin from the default set of vim plugins in
+`.vimrc.bundles`, you can ignore the plugin by adding the plugin name to a
+blacklist in `~/.vimrc.ignorebundles`:
+
+    " Don't install vim-slim
+    let g:plugins_to_ignore = ['slim-template/vim-slim']
+
+Plugins whose name are listed in `g:plugins_to_ignore` will not be installed by
+vim-plug. This blacklist can be useful to install your own fork of a plugin or
+to install with different plugin options.
+
 To extend your `git` hooks, create executable scripts in
 `~/.git_template.local/hooks/*` files.
 
